@@ -1,0 +1,23 @@
+plugins {
+  id "java"
+}
+
+repositories {
+  mavenCentral()
+  maven { url "https://maven.restlet.com" }
+  maven { url "https://dev.saxonica.com/maven" }
+}
+
+dependencies {
+  implementation (
+    [group: 'org.slf4j', name: 'slf4j-api', version: '1.7.32'],
+    [group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.6'],
+    [group: "com.xmlcalabash", name: "xml-calabash_2.13", version: "2.99.5"],
+  )
+}
+
+task helloWorld() {
+  doLast {
+    println("Hello, world.")
+  }
+}
