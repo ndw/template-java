@@ -1,0 +1,2 @@
+namespace http://xmlcalabash.com/ns/extensions = cx
+step cx:template-java = com.xmlcalabash.ext.templatejava.Template

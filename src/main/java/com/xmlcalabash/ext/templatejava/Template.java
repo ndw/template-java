@@ -3,19 +3,15 @@ package com.xmlcalabash.ext.templatejava;
 import com.xmlcalabash.model.util.SaxonTreeBuilder;
 import com.xmlcalabash.model.util.XProcConstants;
 import com.xmlcalabash.runtime.BinaryNode;
-import com.xmlcalabash.runtime.StaticContext;
 import com.xmlcalabash.runtime.XProcMetadata;
 import com.xmlcalabash.runtime.XmlPortSpecification;
 import com.xmlcalabash.steps.DefaultXmlStep;
 import com.xmlcalabash.util.MediaType;
+import com.xmlcalabash.util.MinimalStaticContext;
 import com.xmlcalabash.util.TypeUtils;
 import net.sf.saxon.om.AttributeMap;
 import net.sf.saxon.om.EmptyAttributeMap;
-import net.sf.saxon.s9api.QName;
-import net.sf.saxon.s9api.XdmArray;
-import net.sf.saxon.s9api.XdmAtomicValue;
-import net.sf.saxon.s9api.XdmMap;
-import net.sf.saxon.s9api.XdmNode;
+import net.sf.saxon.s9api.*;
 
 public class Template extends DefaultXmlStep {
     private int binary = 0;
@@ -57,7 +53,7 @@ public class Template extends DefaultXmlStep {
     }
 
     @Override
-    public void run(StaticContext context) {
+    public void run(MinimalStaticContext context) {
         super.run(context);
 
         SaxonTreeBuilder builder = new SaxonTreeBuilder(config());

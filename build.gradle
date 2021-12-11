@@ -11,8 +11,11 @@ repositories {
 dependencies {
   implementation (
     [group: 'org.slf4j', name: 'slf4j-api', version: '1.7.32'],
-    [group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.6'],
-    [group: "com.xmlcalabash", name: "xml-calabash_2.13", version: "2.99.5"],
+    [group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.7'],
+    [group: "com.xmlcalabash", name: "xml-calabash_2.13", version: "2.99.11"],
+  )
+  testImplementation (
+    [group: 'junit', name: 'junit', version: '4.13']
   )
 }
 
